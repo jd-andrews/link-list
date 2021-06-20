@@ -4,27 +4,6 @@
   font-family: "cabin", arial;
 }
 
-body {
-  background: linear-gradient(-45deg, #444d49, #66736d, #b1bab6, #8b9892);
-  background-size: 400% 400%;
-  animation: infiniwaves 15s ease infinite;
-}
-
-@keyframes infiniwaves {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-main {
-  height: 100%;
-}
-
 main, footer, div, h1, h2, h3 {
   display: flex;
   flex-direction: column;
@@ -32,40 +11,68 @@ main, footer, div, h1, h2, h3 {
   align-items: center;
 }
 
-h1 {
-  font-size: 4em;
-  color: #1e201f;
+body {
+  background: linear-gradient(-45deg, #444d49, #66736d, #b1bab6, #8b9892);
+  background-size: 400% 400%;
+  animation: infiniwaves 15s ease infinite;
 }
 
-h2 {
+main {
+  height: 100%;
+}
+
+h1 {
   font-size: 3em;
   color: #1e201f;
 }
 
-a {
-  font-size: 1.7em;
-  text-decoration: none;
-  padding: 20px;
-}
-
-.button {
-  background-color: #1e201f;
-  transition: background-color 0.3s ease-in-out;
-  color: #cecece;
-  border: solid #1e201f 3px;
-  border-radius: 50px;
-  width: 80vw;
-  text-align: center;
-  margin: 10px;
-}
-
-.button:hover {
-  background-color: #77867f;
+h2 {
+  font-size: 2em;
   color: #1e201f;
+}
+
+a {
+  font-size: 1.4em;
+  text-decoration: none;
+  padding: 10px;
 }
 
 img {
   width: 100px;
+}
+
+.button {
+  border-radius: 50px;
+  width: 80vw;
+  text-align: center;
+  margin: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-main {
+  background-color: #1e201f;
+  color: #cecece;
+  border: solid #1e201f 3px;
+}
+
+.button-alt {
+  background-color: #cecece;
+  color: #1e201f;
+  border: solid #cecece 3px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button-main:hover {
+  background-color: #cecece;
+  color: #1e201f;
+}
+
+.button-alt:hover {
+  background-color: #1e201f;
+  color: #cecece;
 }
 
 @media (min-width: 768px) {
@@ -77,8 +84,24 @@ img {
     font-size: 4em;
   }
 
+  a {
+    font-size: 1.7em;
+    padding: 20px;
+  }
+
   .button {
     width: 50vw;
+  }
+}
+@keyframes infiniwaves {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
